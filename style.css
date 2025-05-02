@@ -1,3 +1,6 @@
+/* Load Roboto from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Global styles */
 body {
   font-family: 'Roboto', sans-serif;
@@ -27,94 +30,95 @@ header a:hover {
   color: #f39c12;
 }
 
-/* Profile Section */
+/* Layout */
 .profile-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-.profile-container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
-  max-width: 1000px;
-  width: 100%;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
 }
 
 .profile-img {
-  width: 250px; /* Adjusted for vertical image */
-  height: 400px; /* Adjusted for vertical image */
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.profile-text {
-  flex: 1;
-  text-align: left;
+.profile-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 15px 0 10px;
 }
 
-h1 {
-  font-size: 2.5em;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.15);
+}
+
+/* Vertical line separator */
+.vertical-line {
+  width: 2px;
+  background-color: #ccc;
+  height: auto;
+}
+
+/* Right column */
+.right-column {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.right-column h1 {
+  font-size: 2.2em;
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
-h3 {
-  font-size: 1.8em;
+.right-column h3 {
+  font-size: 1.5em;
   color: #34495e;
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.2em;
+.right-column p {
+  font-size: 1.1em;
   color: #555;
-  max-width: 700px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-/* Social Icons and Footer Links Section Below Profile */
-.social-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 30px;
-}
-
-/* Social Icons */
-.social-icons {
-  text-align: center;
   margin-bottom: 20px;
+  max-width: 700px;
 }
 
-.social-icons a {
-  font-size: 28px;
-  margin: 0 15px;
-  text-decoration: none;
-  color: #2c3e50;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #f39c12;
-}
-
-.social-icons i {
-  font-size: 30px;
-}
-
-/* Footer Links */
 .footer-links {
-  text-align: center;
-  font-size: 1.2em;
+  margin-top: 20px;
+  font-size: 1.1em;
 }
 
 .footer-links a {
+  display: block;
+  margin: 10px 0;
   text-decoration: none;
   color: #2c3e50;
   font-weight: bold;
@@ -126,26 +130,23 @@ p {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  .profile-container {
+@media (max-width: 900px) {
+  .profile-section {
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .right-column {
+    padding-left: 0;
     text-align: center;
   }
 
-  .profile-img {
-    width: 200px;
-    height: 300px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-
-  h3 {
-    font-size: 1.6em;
-  }
-
-  p {
-    font-size: 1.1em;
+  .footer-links a {
+    font-size: 1em;
   }
 }
