@@ -1,104 +1,75 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
-    color: #333;
-}
-
-/* Navigation styles */
-header {
-    background-color: #1e1e1e;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main section layout */
+/* Basic Layout */
 .profile-section {
     display: flex;
-    flex-direction: row;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-    gap: 40px;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-/* Left column (photo) */
+/* Left Column: Profile Picture */
 .left-column {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .profile-img {
-    width: 250px;
+    width: 350px; /* Increased size */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Right column (text) */
+/* Right Column: Text Content */
 .right-column {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-size: 14px; /* Smaller font size */
 }
 
-/* Name styling */
 .profile-name {
-    font-size: 28px;
+    font-size: 2em;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Icons row */
-.social-icons {
-    margin-bottom: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.social-icons img {
+.social-icons a img {
     width: 32px;
     height: 32px;
     vertical-align: middle;
+    margin-right: 15px;
 }
 
-/* Paragraph and links */
-.right-column h3 {
-    margin-top: 0;
-    font-size: 20px;
-    color: #555;
-}
-
-.right-column p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
+/* Footer Links */
 .footer-links a {
-    color: #1e1e1e;
-    text-decoration: underline;
-    font-weight: bold;
+    text-decoration: none;
+    color: #0066cc;
 }
 
-.footer-links a:hover {
-    text-decoration: none;
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-column {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 250px;
+    }
+
+    .right-column {
+        font-size: 12px; /* Even smaller font for mobile */
+    }
+
+    .social-icons a img {
+        width: 28px;
+        height: 28px;
+    }
 }
