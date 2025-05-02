@@ -92,8 +92,8 @@ nav a:hover {
 
 .right-column p {
     font-size: 22px; /* Increased font size for paragraph */
-    line-height: 1.8; /* Adjusted line-height for readability */
-    margin-bottom: 20px;
+    line-height: 1.6; /* Decreased line-height for tighter text spacing */
+    margin-bottom: 15px; /* Decreased margin between paragraphs */
 }
 
 .footer-links a {
