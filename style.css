@@ -1,31 +1,17 @@
-/* Base Box-Sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/* CSS Variables for easy theme management */
-:root {
-    --primary-color: #1e1e1e;
-    --text-color: #333;
-    --accent-color: #555;
-    --background-color: #fafafa;
-    --font-main: 'Arial', sans-serif;
-}
-
 /* General styles */
 body {
-    font-family: var(--font-main);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #fafafa;
+    color: #333;
     font-size: 20px;
     line-height: 1.8;
 }
 
 /* Header Navigation */
 header {
-    background-color: var(--primary-color);
+    background-color: #1e1e1e;
     padding: 15px;
     text-align: center;
 }
@@ -38,8 +24,7 @@ nav a {
     font-size: 22px;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -57,8 +42,9 @@ nav a:focus {
 .left-column {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .profile-img {
@@ -66,6 +52,26 @@ nav a:focus {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between image and icons */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
 }
 
 /* Right Column (text) */
@@ -83,31 +89,10 @@ nav a:focus {
     margin-bottom: 15px;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-bottom: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    transition: transform 0.2s ease;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.1);
-}
-
 /* Paragraph and links */
 .right-column h3 {
     font-size: 28px;
-    color: var(--accent-color);
+    color: #555;
 }
 
 .right-column p {
@@ -116,24 +101,14 @@ nav a:focus {
     margin-bottom: 15px;
 }
 
-/* Footer Links */
 .footer-links a {
-    color: var(--primary-color);
+    color: #1e1e1e;
     text-decoration: underline;
     font-weight: bold;
 }
 
-.footer-links a:hover,
-.footer-links a:focus {
+.footer-links a:hover {
     text-decoration: none;
-}
-
-/* Optional Footer Section Styling */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
 
 /* Media Queries */
@@ -142,7 +117,6 @@ footer {
         flex-direction: column;
         padding: 20px;
     }
-
     .profile-img {
         width: 100%;
         max-width: 350px;
