@@ -1,97 +1,132 @@
-/* General Body Styling (applies to both pages) */
+/* General styles */
 body {
-    font-family: 'Inter', sans-serif; /* Use the same font family across both pages */
-    font-size: 16px;  /* Base font size for body text */
-    line-height: 1.6;  /* Make text more readable */
-    color: #333;  /* Set a standard text color */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
-/* Headings styling */
-h1, h2, h3, h4 {
-    font-family: 'Inter', sans-serif;  /* Ensure same font across all headers */
-    color: #333;  /* Consistent header color */
+/* Header Navigation */
+header {
+    background-color: #1e1e1e;
+    padding: 15px;
+    text-align: center;
 }
 
-h2 {
-    font-size: 24px;  /* Size for h2 headers */
-    font-weight: bold;  /* Bold for h2 */
-    margin-bottom: 15px;  /* Space below h2 */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-h3 {
-    font-size: 20px;  /* Size for h3 headers */
-    font-weight: bold;  /* Bold for h3 */
-    margin-bottom: 10px;  /* Space below h3 */
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Paragraph Styling */
-p {
-    font-family: 'Inter', sans-serif;  /* Ensure same font for paragraphs */
-    font-size: 16px;  /* Base size for paragraphs */
-    margin-bottom: 20px;  /* Space below paragraphs */
-}
-
-/* Link Styling */
-a {
-    font-family: 'Inter', sans-serif;  /* Ensure links use the same font */
-    font-size: 16px;  /* Same font size for links */
-    color: #000;  /* Black color for links */
-    text-decoration: none;  /* Remove underline */
-    transition: color 0.3s ease;  /* Smooth color transition for hover */
-}
-
-a:hover {
-    color: #d32f2f;  /* Change color on hover */
-}
-
-/* Projects Section Styling */
-.projects-section {
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Project Item (for each project) */
-.project-item {
+/* Main Content Section */
+.profile-section {
     display: flex;
-    align-items: flex-start;
-    margin-top: 2em;
-    border: 1px solid #ddd;
-    padding: 1em;
-    border-radius: 8px;
-    font-size: 16px;  /* Ensure project text is the same size */
+    flex-direction: row;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
 }
 
-/* Project Image Styling */
-.project-item img {
-    width: 250px;
+/* Left Column (photo) */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-img {
+    width: 350px;
     height: auto;
     border-radius: 10px;
-    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between image and icons */
 }
 
-/* Additional Styling for PDF Links */
-.project-item div a {
-    display: inline-block;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     margin-top: 10px;
 }
 
-.project-item div i {
-    color: #d32f2f;
-    font-size: 1.5em;
+.social-icons a {
+    display: inline-block;
+    text-align: center;
 }
 
-/* Responsive Design (Optional) */
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+/* Right Column (text) */
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Name styling */
+.profile-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Paragraph and links */
+.right-column h3 {
+    font-size: 28px;
+    color: #555;
+}
+
+.right-column p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #1e1e1e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .project-item {
+    .profile-section {
         flex-direction: column;
-        align-items: center;
+        padding: 20px;
+    }
+    .profile-img {
+        width: 100%;
+        max-width: 350px;
     }
 
-    .project-item img {
-        width: 100%;
-        margin-right: 0;
+    nav a {
+        font-size: 18px;
+    }
+
+    .right-column p {
+        font-size: 18px;
     }
 }
