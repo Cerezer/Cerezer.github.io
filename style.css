@@ -1,17 +1,31 @@
+/* Base Box-Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #1e1e1e;
+    --text-color: #333;
+    --accent-color: #555;
+    --background-color: #fafafa;
+    --font-main: 'Arial', sans-serif;
+}
+
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-main);
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
-    color: #333;
-    font-size: 20px; /* Increased font size for general text */
-    line-height: 1.8; /* Adjusted for readability */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 /* Header Navigation */
 header {
-    background-color: #1e1e1e;
+    background-color: var(--primary-color);
     padding: 15px;
     text-align: center;
 }
@@ -21,10 +35,11 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    font-size: 22px; /* Increased font size for navigation */
+    font-size: 22px;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
 }
 
@@ -63,7 +78,7 @@ nav a:hover {
 
 /* Name styling */
 .profile-name {
-    font-size: 40px; /* Increased font size */
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -82,28 +97,43 @@ nav a:hover {
     width: 32px;
     height: 32px;
     vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
 }
 
 /* Paragraph and links */
 .right-column h3 {
-    font-size: 28px; /* Increased font size for subtitle */
-    color: #555;
+    font-size: 28px;
+    color: var(--accent-color);
 }
 
 .right-column p {
-    font-size: 22px; /* Increased font size for paragraph */
-    line-height: 1.6; /* Decreased line-height for tighter text spacing */
-    margin-bottom: 15px; /* Decreased margin between paragraphs */
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
+/* Footer Links */
 .footer-links a {
-    color: #1e1e1e;
+    color: var(--primary-color);
     text-decoration: underline;
     font-weight: bold;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a:focus {
     text-decoration: none;
+}
+
+/* Optional Footer Section Styling */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Media Queries */
@@ -112,6 +142,7 @@ nav a:hover {
         flex-direction: column;
         padding: 20px;
     }
+
     .profile-img {
         width: 100%;
         max-width: 350px;
