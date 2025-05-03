@@ -1,142 +1,97 @@
-/* General styles */
+/* General Body Styling (applies to both pages) */
 body {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Inter', sans-serif; /* Use the same font family across both pages */
+    font-size: 16px;  /* Base font size for body text */
+    line-height: 1.6;  /* Make text more readable */
+    color: #333;  /* Set a standard text color */
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
-    color: #333;
-    font-size: 20px;
-    line-height: 1.8;
+    box-sizing: border-box;
 }
 
-/* Header Navigation */
-header {
-    background-color: #1e1e1e;
-    padding: 15px;
-    text-align: center;
+/* Headings styling */
+h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;  /* Ensure same font across all headers */
+    color: #333;  /* Consistent header color */
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 22px;
-    transition: all 0.2s ease;
+h2 {
+    font-size: 24px;  /* Size for h2 headers */
+    font-weight: bold;  /* Bold for h2 */
+    margin-bottom: 15px;  /* Space below h2 */
 }
 
-nav a:hover,
-nav a:focus {
-    text-decoration: underline;
-    outline: 2px solid #fff;
-    outline-offset: 3px;
+h3 {
+    font-size: 20px;  /* Size for h3 headers */
+    font-weight: bold;  /* Bold for h3 */
+    margin-bottom: 10px;  /* Space below h3 */
 }
 
-/* Main Content Section */
-.profile-section {
+/* Paragraph Styling */
+p {
+    font-family: 'Inter', sans-serif;  /* Ensure same font for paragraphs */
+    font-size: 16px;  /* Base size for paragraphs */
+    margin-bottom: 20px;  /* Space below paragraphs */
+}
+
+/* Link Styling */
+a {
+    font-family: 'Inter', sans-serif;  /* Ensure links use the same font */
+    font-size: 16px;  /* Same font size for links */
+    color: #000;  /* Black color for links */
+    text-decoration: none;  /* Remove underline */
+    transition: color 0.3s ease;  /* Smooth color transition for hover */
+}
+
+a:hover {
+    color: #d32f2f;  /* Change color on hover */
+}
+
+/* Projects Section Styling */
+.projects-section {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Project Item (for each project) */
+.project-item {
     display: flex;
-    flex-direction: row;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-    gap: 40px;
+    align-items: flex-start;
+    margin-top: 2em;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 16px;  /* Ensure project text is the same size */
 }
 
-/* Left Column (photo) */
-.left-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.profile-img {
-    width: 350px;
+/* Project Image Styling */
+.project-item img {
+    width: 250px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Space between image and icons */
+    margin-right: 20px;
 }
 
-/* Social Icons */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+/* Additional Styling for PDF Links */
+.project-item div a {
+    display: inline-block;
     margin-top: 10px;
 }
 
-.social-icons a {
-    display: inline-block;
-    text-align: center;
+.project-item div i {
+    color: #d32f2f;
+    font-size: 1.5em;
 }
 
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-}
-
-/* Right Column (text) */
-.right-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 800px;
-}
-
-/* Name styling */
-.profile-name {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Paragraph and links */
-.right-column h3 {
-    font-size: 28px;
-    color: #333; /* Improved contrast */
-}
-
-.right-column p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    color: #1e1e1e;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: all 0.2s ease;
-}
-
-.footer-links a:hover,
-.footer-links a:focus {
-    text-decoration: none;
-    outline: 2px solid #1e1e1e;
-    outline-offset: 3px;
-}
-
-/* Media Queries */
+/* Responsive Design (Optional) */
 @media (max-width: 768px) {
-    .profile-section {
+    .project-item {
         flex-direction: column;
-        padding: 20px;
+        align-items: center;
     }
 
-    .profile-img {
+    .project-item img {
         width: 100%;
-        max-width: 350px;
-    }
-
-    nav a {
-        font-size: 18px;
-    }
-
-    .right-column p {
-        font-size: 18px;
+        margin-right: 0;
     }
 }
