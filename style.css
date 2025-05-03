@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fafafa;
@@ -22,10 +22,14 @@ nav a {
     margin: 0 15px;
     font-weight: bold;
     font-size: 22px;
+    transition: all 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }
 
 /* Main Content Section */
@@ -80,6 +84,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    max-width: 800px;
 }
 
 /* Name styling */
@@ -92,7 +97,7 @@ nav a:hover {
 /* Paragraph and links */
 .right-column h3 {
     font-size: 28px;
-    color: #555;
+    color: #333; /* Improved contrast */
 }
 
 .right-column p {
@@ -105,10 +110,14 @@ nav a:hover {
     color: #1e1e1e;
     text-decoration: underline;
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a:focus {
     text-decoration: none;
+    outline: 2px solid #1e1e1e;
+    outline-offset: 3px;
 }
 
 /* Media Queries */
@@ -117,6 +126,7 @@ nav a:hover {
         flex-direction: column;
         padding: 20px;
     }
+
     .profile-img {
         width: 100%;
         max-width: 350px;
