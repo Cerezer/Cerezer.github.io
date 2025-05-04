@@ -1,139 +1,158 @@
-/* General reset - This affects all pages */
+/* General Reset and Typography */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #222;
+  padding: 20px;
 }
 
-/* Navigation Bar - No changes to other pages */
+/* Navigation Bar */
 header {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
+  background-color: #2e3a59;
+  padding: 1em 2em;
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-header nav a:hover {
-    background-color: #555;
-    border-radius: 4px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-/* About Page Specific Styles */
-
-/* Add a unique ID to the body of the about.html page */
-#about-page {
-    background-color: #f9f9f9;
+nav a:hover {
+  background-color: #4b5d85;
 }
 
-/* Styling for the About Section */
-#about-page .about-section {
-    display: block;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+/* --- HOME PAGE --- */
+#home-page .profile-section {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Styling for nature images */
-#about-page .nature-images {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
+#home-page .left-column {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
 }
 
-#about-page .nature-images img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    object-fit: cover;
+#home-page .profile-img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #2e3a59;
 }
 
-/* Styling for headings and text */
+#home-page .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+#home-page .social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+#home-page .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+#home-page .right-column {
+  flex: 2;
+  min-width: 300px;
+}
+
+#home-page .profile-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2e3a59;
+}
+
+#home-page h3 {
+  font-size: 1.4rem;
+  color: #4b5d85;
+  margin-bottom: 15px;
+}
+
+#home-page p {
+  margin-bottom: 20px;
+}
+
+#home-page .footer-links a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2e3a59;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* --- ABOUT PAGE --- */
+#about-page main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 #about-page h1 {
-    font-size: 36px;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #2e3a59;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 10px;
 }
 
 #about-page h2 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-top: 30px;
-    text-decoration: underline;
-}
-
-#about-page h3 {
-    font-size: 24px;
-    color: #2c3e50;
+  font-size: 1.6rem;
+  color: #4b5d85;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 #about-page p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 15px 0;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+#about-page ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#about-page ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
 }
 
 #about-page a {
-    color: #3498db;
-    text-decoration: none;
+  color: #2e3a59;
+  text-decoration: underline;
+  transition: color 0.2s;
 }
 
 #about-page a:hover {
-    text-decoration: underline;
-}
-
-/* Professional Experience and Education Section */
-#about-page .experience, #about-page .education {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #ecf0f1;
-    border-radius: 8px;
-}
-
-#about-page .experience h3, #about-page .education h3 {
-    font-size: 22px;
-    color: #2c3e50;
-}
-
-#about-page .experience p, #about-page .education p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-#about-page .experience i, #about-page .education i {
-    margin-right: 10px;
-    color: #3498db;
-}
-
-/* Footer Links */
-#about-page .footer-links {
-    margin-top: 30px;
-    text-align: center;
-}
-
-#about-page .footer-links a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-#about-page .footer-links a:hover {
-    text-decoration: underline;
+  color: #1a2a40;
 }
