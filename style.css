@@ -1,132 +1,139 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
+/* General reset - This affects all pages */
+* {
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
-    color: #333;
-    font-size: 20px;
-    line-height: 1.8;
+    box-sizing: border-box;
 }
 
-/* Header Navigation */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar - No changes to other pages */
 header {
-    background-color: #1e1e1e;
-    padding: 15px;
+    background-color: #333;
+    padding: 10px;
     text-align: center;
 }
 
-nav a {
-    color: white;
+header nav a {
+    color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 22px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+header nav a:hover {
+    background-color: #555;
+    border-radius: 4px;
 }
 
-/* Main Content Section */
-.profile-section {
-    display: flex;
-    flex-direction: row;
-    padding: 40px;
+/* About Page Specific Styles */
+
+/* Add a unique ID to the body of the about.html page */
+#about-page {
+    background-color: #f9f9f9;
+}
+
+/* Styling for the About Section */
+#about-page .about-section {
+    display: block;
+    padding: 30px;
     max-width: 1200px;
-    margin: auto;
-    gap: 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-/* Left Column (photo) */
-.left-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.profile-img {
-    width: 350px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Space between image and icons */
-}
-
-/* Social Icons */
-.social-icons {
+/* Styling for nature images */
+#about-page .nature-images {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-.social-icons a {
-    display: inline-block;
+#about-page .nature-images img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styling for headings and text */
+#about-page h1 {
+    font-size: 36px;
+    color: #2c3e50;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-}
-
-/* Right Column (text) */
-.right-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Name styling */
-.profile-name {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Paragraph and links */
-.right-column h3 {
+#about-page h2 {
     font-size: 28px;
-    color: #555;
-}
-
-.right-column p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    color: #1e1e1e;
+    color: #2c3e50;
+    margin-top: 30px;
     text-decoration: underline;
-    font-weight: bold;
 }
 
-.footer-links a:hover {
+#about-page h3 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+#about-page p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+#about-page a {
+    color: #3498db;
     text-decoration: none;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .profile-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .profile-img {
-        width: 100%;
-        max-width: 350px;
-    }
+#about-page a:hover {
+    text-decoration: underline;
+}
 
-    nav a {
-        font-size: 18px;
-    }
+/* Professional Experience and Education Section */
+#about-page .experience, #about-page .education {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
 
-    .right-column p {
-        font-size: 18px;
-    }
+#about-page .experience h3, #about-page .education h3 {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+#about-page .experience p, #about-page .education p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#about-page .experience i, #about-page .education i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* Footer Links */
+#about-page .footer-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#about-page .footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#about-page .footer-links a:hover {
+    text-decoration: underline;
 }
