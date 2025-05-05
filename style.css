@@ -9,21 +9,17 @@ body {
     line-height: 1.8;
 }
 
-/* Fixed Header Navigation (Only for Publications Tab) */
-header.publications {
+/* Fixed Header Navigation */
+header {
     background-color: #1e1e1e;
     padding: 15px;
     text-align: center;
     position: fixed;
-    top: 50%; /* Center navbar vertically */
-    left: 50%; /* Center navbar horizontally */
-    transform: translate(-50%, -50%); /* Fine-tune the positioning */
+    top: 0;
+    width: 100%;
     z-index: 1000;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
 }
 
-/* Navigation links */
 nav a {
     color: white;
     text-decoration: none;
@@ -41,6 +37,12 @@ nav a:hover {
     max-width: 1200px;
     margin: 100px auto 0; /* Added margin to avoid header overlap */
     padding: 40px;
+}
+
+.about-section h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Paragraph and links */
