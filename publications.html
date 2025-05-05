@@ -13,12 +13,37 @@
       background-color: #f4f4f4;
     }
 
+    /* Fixed Header Navigation */
+    header {
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container for the publications section */
     .container {
       width: 80%;
       margin: auto;
       padding: 2rem 0;
       background-color: #fff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 100px; /* Adjusted margin to avoid overlap with fixed navbar */
     }
 
     h2 {
@@ -85,6 +110,18 @@
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Publications Section -->
   <div class="container">
     <h2>List of Peer-Reviewed Publications</h2>
     <ul>
@@ -110,8 +147,8 @@
       </li>
 
       <!-- Repeat the same structure for all other publications -->
-
     </ul>
   </div>
+
 </body>
 </html>
