@@ -2,218 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Felipe Cerezer | Projects</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felipe Cerezer | Macroecologist & Evolutionary Biologist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f0f4f8, #e8ecf0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f9f9f9, #eef2f3);
       color: #333;
+      line-height: 1.6;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #2c3e50;
-      text-align: center;
-      padding: 1rem 0;
-      z-index: 1000;
-    }
-
-    nav a {
+    header {
+      background-color: #005f73;
       color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #f39c12;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding-top: 7rem;
-      padding-bottom: 3rem;
-    }
-
-    h1 {
+      padding: 2em 1em;
       text-align: center;
-      font-size: 3rem;
-      margin-top: 0;
-      color: #2c3e50;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      color: #34495e;
-      text-align: center;
-      margin-bottom: 2rem;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
     }
 
-    p.intro {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #444;
-      padding: 0 1rem;
-      text-align: justify;
-      max-width: 800px;
-      margin: 0 auto 3rem auto;
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .projects-section {
-      padding: 2rem 1rem;
+    section {
+      padding: 2em 1em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 1em;
+      color: #0a4c5f;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5em;
     }
 
     .project-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2.5em;
-      background-color: #fff;
+      background-color: white;
       border: 1px solid #ddd;
+      padding: 1.5em;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .project-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .project-item img {
-      width: 250px;
-      height: auto;
+      width: 100%;
+      max-height: 200px;
       object-fit: cover;
-      border-right: 1px solid #eee;
-    }
-
-    .project-item div {
-      padding: 1.5em;
-      flex: 1;
+      border-radius: 8px;
+      margin-bottom: 1em;
     }
 
     .project-item h3 {
-      font-size: 1.5rem;
+      color: #005f73;
+      font-size: 1.4em;
       margin-top: 0;
-      color: #2c3e50;
     }
 
     .project-item p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
+      margin: 0.5em 0 1em;
     }
 
     .project-item a {
-      display: inline-flex;
-      align-items: center;
-      margin-right: 1em;
-      margin-top: 0.8em;
       text-decoration: none;
-      color: #e74c3c;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .project-item a:hover {
-      color: #c0392b;
+      color: #0077b6;
+      font-weight: bold;
     }
 
     .project-item a i {
       margin-right: 6px;
+      color: #0077b6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.9em;
+      color: #555;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>Felipe Cerezer</h1>
+    <p>Macroecologist & Evolutionary Biologist | Exploring biodiversity across time and space</p>
+  </header>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Publications</a>
-    <a href="about.html">About</a>
-  </nav>
-
-  <!-- CONTENT -->
-  <div class="container">
-    <h1>Research Projects</h1>
-    <h2>Research Highlights</h2>
-    <p class="intro">
-      As a macroecologist and evolutionary biologist, I am keen to understand the evolution of biodiversity—past, present, and future.
-      I am particularly interested in how environmental, ecological, and macroevolutionary mechanisms combine to shape the biological
-      patterns we see today. I address these questions across a variety of systems and animal groups. Some of the questions I work on include:
-    </p>
-
-    <div class="projects-section">
-
-      <!-- Project 1 -->
-      <div class="project-item">
-        <img src="speciation.jpeg" alt="Drivers of Speciation">
-        <div>
-          <h3>What Fuels the Tree of Life? Uncovering the Drivers of Speciation</h3>
-          <p>
-            This project explores variation in speciation rates across clades of terrestrial vertebrates, aiming to identify the
-            ecological, environmental, and life-history factors that drive diversification. Using phylogenetic and comparative methods,
-            it seeks to reveal consistent predictors of high speciation rates and enhance our understanding of biodiversity patterns.
-          </p>
-          <a href="https://www.nature.com/articles/s41467-023-41812-7" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 1
-          </a>
-          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.13167" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 2
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-item">
-        <img src="ldg.jpeg" alt="Species Richness Patterns">
-        <div>
-          <h3>Causes of Species Richness Patterns Across Space, Time, and Clades</h3>
-          <p>
-            This project explores the factors that drive variations in biodiversity across different regions and clades. By examining
-            historical, evolutionary, and ecological factors in innovative ways, this project aims to uncover the secrets behind
-            the dramatic geographic and phylogenetic variation of life on Earth.
-          </p>
-          <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/geb.13559" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 1
-          </a>
-          <a href="https://www.journals.uchicago.edu/doi/full/10.1086/716171" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 2
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-item">
-        <img src="color.jpeg" alt="Animal Coloration">
-        <div>
-          <h3>Evolution and Function of Animal Coloration</h3>
-          <p>
-            Coloration is one of the most notable characteristics of animals, yet its adaptive significance remains underexplored.
-            This project investigates the diverse roles and evolutionary origins of coloration, with a particular focus on mammals.
-          </p>
-          <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/geb.13802" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 1
-          </a>
-          <a href="https://academic.oup.com/evolut/article/74/9/2046/6727281" target="_blank">
-            <i class="fas fa-file-pdf"></i> View publication 2
-          </a>
-        </div>
-      </div>
-
+  <section>
+    <div class="section-title">About My Work</div>
+    <div class="project-item">
+      <p>
+        As a macroecologist and evolutionary biologist, I am keen to understand the evolution of biodiversity—past, present, and future.
+        I am particularly interested in how environmental, ecological, and macroevolutionary mechanisms combine to shape the biological
+        patterns we see today. I address these questions across a variety of systems and animal groups. Some of the questions I work on include:
+      </p>
     </div>
-  </div>
+  </section>
 
+  <section>
+    <div class="section-title">Current Projects</div>
+
+    <div class="project-item">
+      <img src="speciation.jpeg" alt="Drivers of Speciation" />
+      <h3>What Fuels the Tree of Life? Uncovering the Drivers of Speciation</h3>
+      <p>Exploring how different evolutionary, ecological, and historical factors drive the diversification of species across lineages and regions.</p>
+      <a href="#"><i class="fas fa-link"></i> Learn More</a>
+    </div>
+
+    <div class="project-item">
+      <img src="extinction.jpeg" alt="Extinction Dynamics" />
+      <h3>Understanding Extinction: Historical Patterns and Modern Risks</h3>
+      <p>Investigating the causes and consequences of species extinction in deep time and contemporary ecosystems.</p>
+      <a href="#"><i class="fas fa-link"></i> Learn More</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Felipe Cerezer. All rights reserved.
+  </footer>
 </body>
 </html>
