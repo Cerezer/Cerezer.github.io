@@ -6,6 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Felipe O. Cerezer - Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Minimal additional CSS for layout */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .left-column {
+            flex: 1 1 250px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .right-column {
+            flex: 2 1 500px;
+        }
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .social-icons {
+            margin-top: 1rem;
+        }
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,10 +52,10 @@
 
     <!-- Main Content Section -->
     <section class="profile-section">
-        <!-- Left Column: Photo -->
+        <!-- Left Column: Photo + Social Icons -->
         <div class="left-column">
             <img src="profile_pic.jpeg" alt="Felipe O. Cerezer" class="profile-img">
-            
+
             <!-- Social Icons below the profile picture -->
             <div class="social-icons">
                 <a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar">
