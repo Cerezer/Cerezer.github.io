@@ -3,57 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Felipe O. Cerezer - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Felipe Cerezer – Macroecologist & Evolutionary Biologist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding-top: 70px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 1em;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2em;
+    }
+
+    .intro-box {
+      border: 1px solid #ddd;
+      padding: 1.5em;
+      border-radius: 8px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2em;
+    }
+
+    .intro-text {
+      flex: 1 1 60%;
+    }
+
+    .intro-text p {
+      text-align: justify;
+      margin: 0;
+    }
+
+    .intro-img {
+      flex: 1 1 30%;
+      max-width: 250px;
+    }
+
+    .intro-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 1.8em;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .intro-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .intro-text, .intro-img {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">About</a>
+  </nav>
 
-  <!-- Fixed Header -->
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="publications.html">Publications</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-
-  <!-- Main Profile Section -->
-  <section class="home-container">
-    <!-- Left Column -->
-    <div class="home-left">
-      <img src="profile_pic.jpeg" alt="Felipe O. Cerezer" class="home-profile-img" />
-      <div class="home-social-icons">
-        <a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar">
-          <img src="google.svg" alt="Google Scholar" />
-        </a>
-        <a href="https://www.researchgate.net/profile/Felipe-Cerezer?ev=hdr_xprf" target="_blank" title="ResearchGate">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" />
-        </a>
-        <a href="https://bsky.app/profile/cerezer.bsky.social" target="_blank" title="Bluesky">
-          <img src="bluesky.svg" alt="Bluesky" />
-        </a>
+  <section class="section-container" id="about">
+    <h2>Welcome</h2>
+    <div class="intro-box">
+      <div class="intro-img">
+        <img src="your-photo.jpg" alt="Felipe Cerezer">
+      </div>
+      <div class="intro-text">
+        <p>
+          I'm Felipe Cerezer, a macroecologist and evolutionary biologist passionate about uncovering the processes that shape biodiversity through time and across space. My research bridges macroecology, macroevolution, and biogeography, using phylogenies, spatial data, and species traits to explore how historical, ecological, and evolutionary dynamics drive large-scale patterns of species richness. I am currently a postdoctoral fellow at Charles University in Prague.
+        </p>
       </div>
     </div>
-
-    <!-- Right Column -->
-    <div class="home-right">
-      <h1 class="home-name">Felipe O. Cerezer</h1>
-      <h3>Macroecology, Evolutionary Biology & Biogeography</h3>
-      <p>
-        Welcome!<br><br>
-        I am a Brazilian scientist passionate about understanding the diversity of life on Earth. 
-        My research in macroecology, evolutionary biology, and biogeography uncovers the amazing patterns 
-        and processes that sculpt biodiversity among clades, regions, and time. 
-        Join me as I explore how life evolves, adapts, and thrives in our ever-changing world!
-      </p>
-      <p>
-        If you're interested in learning more or collaborating, feel free to reach out.<br>
-        <a href="CV_Felipe_Cerezer.pdf" target="_blank">Download my CV (PDF)</a>
-      </p>
-    </div>
   </section>
-
 </body>
 </html>
