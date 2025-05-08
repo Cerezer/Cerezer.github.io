@@ -1,162 +1,85 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
-    color: #333;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-/* Fixed Header Navigation */
-header {
-    background-color: #1e1e1e;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Section */
-.about-section {
-    max-width: 1200px;
-    margin: 100px auto 0; /* Added margin to avoid header overlap */
-    padding: 40px;
-}
-
-.about-section h1 {
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Paragraph and links */
-.about-section p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.about-section a {
-    color: #1e1e1e;
-    text-decoration: underline;
-}
-
-.about-section a:hover {
-    text-decoration: none;
-}
-
-/* Nature Images */
-.nature-images {
+/* === HOME PAGE SPECIFIC STYLES === */
+.home-profile-section {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 40px;
+    gap: 40px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
 }
 
-.nature-images img {
-    width: 100%;
-    max-width: 200px;
+.home-left-column {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.home-profile-img {
+    width: 200px;
     height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.nature-images img:hover {
-    transform: scale(1.05);
-}
-
-/* Section Boxes */
-.box {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
+    border-radius: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
-.box:hover {
-    transform: translateY(-5px);
+.home-social-icons {
+    margin-top: 20px;
+}
+
+.home-social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
     transition: transform 0.3s ease;
 }
 
-/* Professional Experience and Education Box Titles */
-.box h2 {
-    font-size: 30px;
-    color: #1e1e1e;
-    margin-bottom: 15px;
+.home-social-icons img:hover {
+    transform: scale(1.2);
 }
 
-/* Experience and Education Content */
-.experience p, .education p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.home-right-column {
+    flex: 2 1 600px;
 }
 
-.experience h3, .education h3 {
-    font-size: 24px;
+.home-profile-name {
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.experience i, .education i {
-    margin-right: 8px;
+.home-footer-links {
+    margin-top: 30px;
 }
 
-/* Specific styling for the education section */
-.education {
-    background-color: #e8f5e9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.home-footer-links a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: #1e1e1e;
+    font-weight: bold;
 }
 
-.experience {
-    background-color: #f4e1d2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.home-footer-links a:hover {
+    text-decoration: none;
 }
 
-/* Responsive Styles */
+/* Responsive Styling */
 @media (max-width: 768px) {
-    body {
-        font-size: 18px;
+    .home-profile-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
-    .about-section h1 {
-        font-size: 32px;
+    .home-left-column,
+    .home-right-column {
+        flex: 1 1 100%;
+        text-align: center;
     }
 
-    nav a {
-        font-size: 18px;
-        margin: 0 10px;
+    .home-profile-img {
+        width: 150px;
     }
 
-    .nature-images {
-        justify-content: center;
+    .home-profile-name {
+        font-size: 28px;
     }
-
-    .nature-images img {
-        max-width: 100%;
-    }
-}
-
-/* Smooth scrolling behavior for anchor links */
-html {
-    scroll-behavior: smooth;
 }
