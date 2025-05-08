@@ -1,64 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Felipe O. Cerezer - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Felipe O. Cerezer - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="publications.html">Publications</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Content Section -->
-    <section class="profile-section">
-        <!-- Left Column: Photo -->
-        <div class="left-column">
-            <img src="profile_pic.jpeg" alt="Felipe O. Cerezer" class="profile-img">
-            
-            <!-- Social Icons below the profile picture -->
-            <div class="social-icons">
-                <a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar">
-                    <img src="google.svg" alt="Google Scholar">
-                </a>
-                <a href="https://www.researchgate.net/profile/Felipe-Cerezer?ev=hdr_xprf" target="_blank" title="ResearchGate">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate">
-                </a>
-                <a href="https://bsky.app/profile/cerezer.bsky.social" target="_blank" title="Bluesky">
-                    <img src="bluesky.svg" alt="Bluesky">
-                </a>
-            </div>
+  <main class="container">
+    <section class="profile">
+      <aside class="profile-left">
+        <img src="profile_pic.jpeg" alt="Felipe O. Cerezer" class="profile-img" />
+
+        <div class="social-icons">
+          <a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar">
+            <img src="google.svg" alt="Google Scholar" />
+          </a>
+          <a href="https://www.researchgate.net/profile/Felipe-Cerezer?ev=hdr_xprf" target="_blank" title="ResearchGate">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" />
+          </a>
+          <a href="https://bsky.app/profile/cerezer.bsky.social" target="_blank" title="Bluesky">
+            <img src="bluesky.svg" alt="Bluesky" />
+          </a>
         </div>
+      </aside>
 
-        <!-- Right Column: Text Content -->
-        <div class="right-column">
-            <div class="profile-name">Felipe O. Cerezer</div>
+      <section class="profile-right">
+        <h1 class="profile-name">Felipe O. Cerezer</h1>
+        <h3 class="profile-title">Macroecology, Evolutionary Biology & Biogeography</h3>
 
-            <h3>Macroecology, Evolutionary Biology & Biogeography</h3>
+        <p class="intro-text">
+          Welcome! I'm a Brazilian scientist passionate about understanding the diversity of life on Earth. My research in macroecology, evolutionary biology, and biogeography uncovers the amazing patterns and processes that sculpt biodiversity among clades, regions, and time. Join me as I explore how life evolves, adapts, and thrives in our ever-changing world!
+        </p>
 
-            <p>
-                Welcome!<br><br>
-                I am a Brazilian scientist passionate about understanding the diversity of life on Earth. 
-                My research in macroecology, evolutionary biology, and biogeography uncovers the amazing patterns 
-                and processes that sculpt biodiversity among clades, regions, and time. 
-                Join me as I explore how life evolves, adapts, and thrives in our ever-changing world!
-            </p>
-
-            <div class="footer-links">
-                <p>If you're interested in learning more or collaborating, feel free to reach out.</p>
-                <a href="CV_Felipe_Cerezer.pdf" target="_blank" title="Download CV">For more details, check out my CV (PDF)</a>
-            </div>
+        <div class="cv-download">
+          <p>If you're interested in learning more or collaborating, feel free to reach out.</p>
+          <a href="CV_Felipe_Cerezer.pdf" target="_blank" title="Download CV">Check out my CV (PDF)</a>
         </div>
+      </section>
     </section>
+  </main>
 
 </body>
 </html>
