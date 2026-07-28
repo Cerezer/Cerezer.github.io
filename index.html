@@ -1,61 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Felipe O. Cerezer - Home</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Felipe O. Cerezer - Home</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.hero{
+    max-width:900px;
+    margin:70px auto 60px auto;
+    text-align:center;
+    padding:0 30px;
+}
+
+.hero h1{
+    font-size:3em;
+    margin-bottom:10px;
+    color:#2c3e50;
+}
+
+.hero h2{
+    font-size:1.35em;
+    font-weight:400;
+    color:#666;
+    margin-top:0;
+    margin-bottom:40px;
+}
+
+.photo-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:760px;
+    margin:0 auto 35px auto;
+
+}
+
+.photo-grid img{
+
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+
+}
+
+.social-icons{
+
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-bottom:45px;
+
+}
+
+.social-icons img{
+
+    width:38px;
+    height:38px;
+    transition:transform .25s ease;
+
+}
+
+.social-icons img:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.intro{
+
+    max-width:780px;
+    margin:0 auto;
+    text-align:justify;
+    line-height:1.8;
+    color:#444;
+    font-size:1.05em;
+
+}
+
+.intro p:first-child{
+
+    margin-top:0;
+
+}
+
+.separator{
+
+    width:120px;
+    height:2px;
+    background:#d8d8d8;
+    margin:45px auto;
+
+}
+
+.explore{
+
+    text-align:center;
+
+}
+
+.explore h3{
+
+    color:#2c3e50;
+    margin-bottom:25px;
+    font-size:1.4em;
+
+}
+
+.explore-links{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+.explore-links a{
+
+    text-decoration:none;
+    color:#2c3e50;
+    border:2px solid #2c3e50;
+    border-radius:8px;
+    padding:12px 28px;
+    font-weight:bold;
+    transition:.25s;
+
+}
+
+.explore-links a:hover{
+
+    background:#2c3e50;
+    color:white;
+
+}
+
+@media (max-width:750px){
+
+.hero h1{
+    font-size:2.3em;
+}
+
+.hero h2{
+    font-size:1.15em;
+}
+
+.photo-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="publications.html">Publications</a>
-            <a href="about.html">CV</a>
-        </nav>
-    </header>
+<header>
 
-    <!-- Main Content Section -->
-    <section class="profile-section">
-        <!-- Left Column: Photo -->
-        <article class="left-column">
-            <img src="profile_pic.jpeg" alt="Profile picture of Felipe O. Cerezer, Brazilian scientist" class="profile-img" style="width: 300px; height: auto;">
-            
-            <!-- Social Media Links -->
-            <div class="social-icons">
-                <a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank" title="Visit Felipe O. Cerezer's Google Scholar profile">
-                    <img src="google.svg" alt="Google Scholar">
-                </a>
-                <a href="https://www.researchgate.net/profile/Felipe-Cerezer?ev=hdr_xprf" target="_blank" title="Visit Felipe O. Cerezer's ResearchGate profile">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate">
-                </a>
-                <a href="https://bsky.app/profile/cerezer.bsky.social" target="_blank" title="Visit Felipe O. Cerezer's Bluesky profile">
-                    <img src="bluesky.svg" alt="Bluesky">
-                </a>
-            </div>
-        </article>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">CV</a>
+</nav>
 
-        <!-- Right Column: Text Content -->
-        <article class="right-column">
-            <h1 class="profile-name">Felipe O. Cerezer</h1>
-            <h3>Macroecology, Evolutionary Biology & Biogeography</h3>
+</header>
 
-            <p>
-                Welcome to my website! I'm a Brazilian scientist dedicated to exploring the complex patterns and processes that shape biodiversity across the globe. My work focuses on macroecology, evolutionary biology, and biogeography, with an emphasis on understanding how ecological and evolutionary factors influence species diversity across time and space.  
-                <br><br>
-                Through my research, I aim to uncover the underlying mechanisms that drive life’s diversity, from the patterns of adaptation to the evolutionary histories that have shaped the species we see today. Join me as I explore the fascinating interplay between environment, evolution, and the diversity of life on Earth!
-            </p>
+<section class="hero">
 
-            <footer class="footer-links">
-                <p>If you're interested in learning more or collaborating, feel free to reach out.</p>
-                <a href="CV_Felipe_Cerezer.pdf" target="_blank" title="Download Felipe O. Cerezer's CV (PDF)">For more details, check out my CV (PDF)</a>
-            </footer>
-        </article>
-    </section>
+<h1>Felipe O. Cerezer</h1>
+
+<h2>
+Macroecology • Evolutionary Biology • Biogeography
+</h2>
+
+
+<div class="photo-grid">
+
+<img src="profile_pic.jpeg" alt="Felipe Cerezer">
+
+<img src="profile_pic.jpeg" alt="Felipe Cerezer">
+
+<img src="profile_pic.jpeg" alt="Felipe Cerezer">
+
+<img src="profile_pic.jpeg" alt="Felipe Cerezer">
+
+</div>
+
+
+<div class="social-icons">
+
+<a href="https://scholar.google.com/citations?user=wUiHfVoAAAAJ&hl=pt-BR" target="_blank">
+
+<img src="google.svg" alt="Google Scholar">
+
+</a>
+
+<a href="https://www.researchgate.net/profile/Felipe-Cerezer?ev=hdr_xprf" target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate">
+
+</a>
+
+<a href="https://bsky.app/profile/cerezer.bsky.social" target="_blank">
+
+<img src="bluesky.svg" alt="Bluesky">
+
+</a>
+
+</div>
+
+
+<div class="intro">
+
+<p>
+
+Welcome! I am a Brazilian macroecologist studying the ecological and evolutionary processes that generate biodiversity across space and time. My research integrates macroecology, macroevolution, biogeography, and comparative methods to understand why species are distributed the way they are and how biodiversity evolves.
+
+</p>
+
+<p>
+
+My work focuses on the drivers of diversification, large-scale species richness patterns, climatic niche evolution, and the evolution of functional traits across vertebrates. By combining phylogenetic, ecological, and spatial approaches, I aim to uncover the mechanisms shaping biodiversity from regional to global scales.
+
+</p>
+
+</div>
+
+<div class="separator"></div>
+
+<div class="explore">
+
+<h3>Explore</h3>
+
+<div class="explore-links">
+
+<a href="projects.html">Projects</a>
+
+<a href="publications.html">Publications</a>
+
+<a href="about.html">Curriculum Vitae</a>
+
+</div>
+
+</div>
+
+</section>
 
 </body>
 </html>
